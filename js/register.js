@@ -1,4 +1,4 @@
-var infoDiv = document.getElementById('validationDiv')
+var infoDiv = document.getElementById('register-validation-div')
 var errorMessages = ''
 
 var emailInput = document.getElementById('register-input-email')
@@ -9,8 +9,7 @@ var labelsQantity = document.getElementsByTagName('Label')
 var inputsQantity = document.getElementsByTagName('input')
 var buttonsQantity = document.getElementsByTagName('button')
 var formExistence = document.getElementsByTagName('form')
-
-
+var formWillReset = document.getElementById('register-form')
 
 function userAndDomValidations() {
 
@@ -70,6 +69,14 @@ function userAndDomValidations() {
         return;
     }
 
+    // Validate if the  confirm-password match with the password
+    if (confirmPasswordInput.value !== passwordInput.value) {
+        errorMessages = ("Please, make match the passwords")
+        infoDiv.style.display = "block"
+        infoDiv.innerText = errorMessages
+        return;
+    }
+
     // Validate if the  email input contains null value 
     if (emailInput.value === null) {
         errorMessages = ("Email field can't be null")
@@ -101,11 +108,10 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+}
 
-
-
-
-
+function cleanForm() {
+    formWillReset.reset();
 }
 
 

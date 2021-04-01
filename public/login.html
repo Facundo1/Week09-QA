@@ -12,19 +12,19 @@
 
 <body>
     <div class="login-form">
-        <h1>Login form</h1>
-        <form action="#" method="post">
+        <h1>RadiumRocket Login</h1>
+        <form id="login-form" action="#" method="post">
             <label>Email
                 <input id='login-input-email' type="email" required />
             </label>
             <label>Password
                 <input id='login-input-password' type="password" required />
             </label>
-            <button type="submit" onclick="userAndDomValidations()">Login</button>
+            <button type="submit" onclick="userAndDomValidations()">Enter</button>
         </form>
-        <a id='register-link' href="register.html" rel="noopener noreferrer">don't have account? register now!</a>
+        <a id='go-to-register-link' href="register.html" rel="noopener noreferrer">don't have account? register now!</a>
     </div>
-    <div id="validationDiv">Validaciones</div>
+    <div id="login-validation-div">Validaciones</div>
 
     <script src="../js/login.js"></script>
 </body>

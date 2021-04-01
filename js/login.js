@@ -1,4 +1,4 @@
-var infoDiv = document.getElementById('validationDiv')
+var infoDiv = document.getElementById('login-validation-div')
 var errorMessages = ''
 
 var emailInput = document.getElementById('login-input-email')
@@ -7,8 +7,7 @@ var labelsQantity = document.getElementsByTagName('Label')
 var inputsQantity = document.getElementsByTagName('input')
 var buttonsQantity = document.getElementsByTagName('button')
 var formExistence = document.getElementsByTagName('form')
-
-console.log(emailInput.value, passwordInput)
+var formWillReset = document.getElementById('login-form')
 
 function userAndDomValidations() {
     // Validate if in the HTML document exist a form
@@ -34,6 +33,7 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+
     // Validate if the  email input contains text 
     if (emailInput.value === "") {
         errorMessages = ("Email field can't be empty")
@@ -49,6 +49,7 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+
     // Validate if the  email input contains null value 
     if (emailInput.value === null) {
         errorMessages = ("Email field can't be null")
@@ -56,6 +57,7 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+
     // Validate if the  password input contains null value
     if (passwordInput.value === null) {
         errorMessages = ("Password field can't be null")
@@ -63,6 +65,7 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+
     // Validate the qantity of buttons are in the document
     if (buttonsQantity.value === 2) {
         errorMessages = ("there aren't the enoght qantity of button tags in the document")
@@ -70,6 +73,7 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
+
     // all validations passed
     else {
         errorMessages = ("Al DOM and user validations passed")
@@ -77,13 +81,11 @@ function userAndDomValidations() {
         infoDiv.innerText = errorMessages
         return;
     }
-
-
-
-
-
 }
 
+function cleanForm() {
+    formWillReset.reset();
+}
 
 
 

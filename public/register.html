@@ -13,7 +13,7 @@
 <body>
     <div class="register-form">
         <h1>Register form</h1>
-        <form action="#" method="post">
+        <form id='register-form' action="#" method="post">
             <label>Email
                 <input id='register-input-email' type="email" required />
             </label>
@@ -27,8 +27,9 @@
                 <input id='register-input-confirm-password' type="password" required />
             </label>
             <button type="submit" onclick="userAndDomValidations()">Create account</button>
-            <button type="submit">Reset fields</button>
-            <div id="validationDiv">Validaciones</div>
+            <button type="button" onclick="cleanForm()">Reset fields</button>
+            <a id='back-to-login-link' href="login.html" rel="noopener noreferrer">Back →</a>
+            <div id="register-validation-div">Validaciones</div>
 
         </form>
     </div>
