@@ -17,6 +17,7 @@ function userAndDomValidations() {
     if (formExistence.length === 0) {
         errorMessages = ("Form tag doesn't exist in the html document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -25,6 +26,7 @@ function userAndDomValidations() {
     if (labelsQantity.length !== 4) {
         errorMessages = ("There aren't the enoght qantity of label tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -33,6 +35,7 @@ function userAndDomValidations() {
     if (inputsQantity.length !== 4) {
         errorMessages = ("there aren't the enoght qantity of inputs tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -41,6 +44,7 @@ function userAndDomValidations() {
     if (emailInput.value === "") {
         errorMessages = ("Email field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -49,6 +53,7 @@ function userAndDomValidations() {
     if (nameInput.value === "") {
         errorMessages = ("Name field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -57,6 +62,7 @@ function userAndDomValidations() {
     if (passwordInput.value === "") {
         errorMessages = ("Password field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -65,6 +71,7 @@ function userAndDomValidations() {
     if (confirmPasswordInput.value === "") {
         errorMessages = ("Confirm password field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -73,6 +80,7 @@ function userAndDomValidations() {
     if (confirmPasswordInput.value !== passwordInput.value) {
         errorMessages = ("Please, make match the passwords")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -81,6 +89,7 @@ function userAndDomValidations() {
     if (emailInput.value === null) {
         errorMessages = ("Email field can't be null")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -89,6 +98,7 @@ function userAndDomValidations() {
     if (passwordInput.value === null) {
         errorMessages = ("Password field can't be null")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -97,14 +107,16 @@ function userAndDomValidations() {
     if (buttonsQantity.length !== 2) {
         errorMessages = ("there aren't the enoght qantity of button tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
 
     // all validations passed
     else {
-        errorMessages = ("All DOM and users validations passed")
+        errorMessages = ("♣ All DOM and users validations passed. Account created successfully♣")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "green"
         infoDiv.innerText = errorMessages
         return;
     }

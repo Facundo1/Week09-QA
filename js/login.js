@@ -10,10 +10,12 @@ var formExistence = document.getElementsByTagName('form')
 var formWillReset = document.getElementById('login-form')
 
 function userAndDomValidations() {
+
     // Validate if in the HTML document exist a form
     if (formExistence.length === 0) {
         errorMessages = ("Form tag doesn't exist in the html document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -22,6 +24,7 @@ function userAndDomValidations() {
     if (labelsQantity.length !== 2) {
         errorMessages = ("There aren't label tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -30,6 +33,7 @@ function userAndDomValidations() {
     if (inputsQantity.length !== 2) {
         errorMessages = ("there aren't inputs tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -38,6 +42,7 @@ function userAndDomValidations() {
     if (emailInput.value === "") {
         errorMessages = ("Email field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -46,6 +51,7 @@ function userAndDomValidations() {
     if (passwordInput.value === "") {
         errorMessages = ("Password field can't be empty")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -54,6 +60,7 @@ function userAndDomValidations() {
     if (emailInput.value === null) {
         errorMessages = ("Email field can't be null")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -62,6 +69,7 @@ function userAndDomValidations() {
     if (passwordInput.value === null) {
         errorMessages = ("Password field can't be null")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
@@ -70,14 +78,16 @@ function userAndDomValidations() {
     if (buttonsQantity.value === 2) {
         errorMessages = ("there aren't the enoght qantity of button tags in the document")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "red"
         infoDiv.innerText = errorMessages
         return;
     }
 
     // all validations passed
     else {
-        errorMessages = ("Al DOM and user validations passed")
+        errorMessages = ("♣ All DOM and user validations passed ♣")
         infoDiv.style.display = "block"
+        infoDiv.style.color = "green"
         infoDiv.innerText = errorMessages
         return;
     }
